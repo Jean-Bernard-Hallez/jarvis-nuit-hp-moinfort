@@ -27,5 +27,5 @@ Modifier le fichier config... C'est tout...
 ```
 
 ## Author
-[Jean-Bernard Hallez](https://github.com/Jean-Bernard-Hallez/jarvis-lacitation)
+[Jean-Bernard Hallez](https://github.com/Jean-Bernard-Hallez/jarvis-nuit-hp-moinfort)
 
