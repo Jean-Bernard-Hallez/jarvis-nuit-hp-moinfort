@@ -40,6 +40,7 @@ fi
 }
 
 onestleve_WGET () {
+if [[ "$DOMOTICZ_ADRESSE_APARTIRDE" != "" ]]; then
 	if [[ "$AFFICHAGE_ETAT_APARTIRDE" == "ON" ]]; then
 	jv_info "Wget Domoticz en cours.... "
 	fi
@@ -64,21 +65,32 @@ onestleve_WGET () {
 		etat_M_A_Validation="OFF"
 		fi
 	
+else
+	if [[ "$AFFICHAGE_ETAT_APARTIRDE" == "ON" ]]; then
+	jv_info "Pas de Capteur Domoticz d'enregistrée" 
+	fi
+
+fi
 }
 
 jv_pg_ct_onestleve() {
 onestleve_WGET
-if [[ "$etat_M_A" =~ "On" ]]; then
-say "Le Capteur"
-say "$DOMOTICZ_CAPTEUR_APARTIRDE"
-say "est sur $etat_M_A_Validation"
-say "Il a donc bien détecté que vous étiez lever"
-fi
-
-if [[ "$etat_M_A" =~ "Off" ]]; then
-say "Le Capteur $DOMOTICZ_CAPTEUR_APARTIRDE"
-say "est sur $etat_M_A_Validation"
-say "Il a donc détecté que vous étiez encore coucher."
+if [[ "$DOMOTICZ_ADRESSE_APARTIRDE" != "" ]]; then
+	if [[ "$etat_M_A" =~ "On" ]]; then
+	say "Le Capteur"
+	say "$DOMOTICZ_CAPTEUR_APARTIRDE"
+	say "est sur $etat_M_A_Validation"
+	say "Il a donc bien détecté que vous étiez lever"
+	fi
+	
+	if [[ "$etat_M_A" =~ "Off" ]]; then
+	say "Le Capteur $DOMOTICZ_CAPTEUR_APARTIRDE"
+	say "est sur $etat_M_A_Validation"
+	say "Il a donc détecté que vous étiez encore coucher."
+	fi
+else
+say "plage horaire volume maximum"
+say "programmée entre $OKPARLE_APARTIRDE heure et $PASDEBRUIT_APARTIRDE heure"
 fi
 
 if [[ "$il_est_exactement" -ge "$OKPARLE_APARTIRDE"  ]] && [[ "$il_est_exactement" -le "$PASDEBRUIT_APARTIRDE" ]]; then

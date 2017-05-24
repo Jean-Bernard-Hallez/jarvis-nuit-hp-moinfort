@@ -13,7 +13,7 @@ PASDEBRUIT_APARTIRDE="21"
 # Volume minumum la nuit... en pourcentage
 VOLUME_MIN_APARTIRDE="60%" 
 
-# Adresse Domoticz
+# Adresse Domoticz laisser "" au 2 variable ci dessous si vous n'avez pas de capteur...
 DOMOTICZ_CAPTEUR_APARTIRDE="Reveil OK on est lever"
 DOMOTICZ_ADRESSE_APARTIRDE="192.168.0.1:9090"
 

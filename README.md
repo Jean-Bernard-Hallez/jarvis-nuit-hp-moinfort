@@ -11,7 +11,7 @@ For multi-language plugin:
 -->
 ## Description
 Permet de régler le volume en fontion d'une plage horaire pour ne pas être déranger la nuit...
-Ce plugin fonctionne avec Domoticz... un capteur me dit si je suis debout ou pas... je l'utilise afin de réveiller Jarvis avec le Volumme à 60% au lieu de 100% par exemple a partir d'une certaine heure.
+Ce plugin fonctionne avec Domoticz... (Ce n'est pas obligatoire !!!) un capteur me dit si je suis debout ou pas... je l'utilise afin de réveiller Jarvis avec le Volume à 60% au lieu de 100% par exemple à partir d'une certaine heure.
 
 
 ## Languages
