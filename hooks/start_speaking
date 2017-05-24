@@ -1,0 +1,4 @@
+$verbose && jv_debug "DEBUG: start_speaking hook"
+# echo "j'ai détecté Jarvi... Juste avant de parler"
+test_parle_fort
+

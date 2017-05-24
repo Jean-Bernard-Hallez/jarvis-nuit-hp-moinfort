@@ -1,0 +1,3 @@
+$verbose && jv_debug "DEBUG: start_listening hook"
+# echo "dès qu'il a fini de parler"
+onestleve_parlefoert_ON
