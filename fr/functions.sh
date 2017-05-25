@@ -5,6 +5,11 @@ test_parle_fort() {
 
 il_est_exactement=`date +%H`;
 
+if [[ `echo "$il_est_exactement" | cut -c1` == "0" ]]; then 
+il_est_exactement=`echo "$il_est_exactement" | cut -c2-`
+fi
+
+
 if [[ `echo "$OKPARLE_APARTIRDE" | cut -c1` == "0" ]]; then 
 OKPARLE_APARTIRDE=`echo "$OKPARLE_APARTIRDE" | cut -c2-`
 fi
